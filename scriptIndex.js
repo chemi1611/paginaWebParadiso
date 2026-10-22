@@ -16,6 +16,25 @@ const flyerOptions = {
 const flyerImage = document.querySelector("#flyer-image");
 const imageCaption = document.querySelector("#image-caption");
 const selectorButtons = document.querySelectorAll(".selector-button");
+const previewTrigger = document.querySelector(".flyer-preview-trigger");
+const previewDialog = document.querySelector(".preview-dialog");
+const previewImage = document.querySelector(".preview-image");
+const previewClose = document.querySelector(".preview-close");
+
+previewTrigger.addEventListener("click", () => {
+	previewImage.src = flyerImage.src;
+	previewImage.alt = flyerImage.alt;
+	previewDialog.showModal();
+	previewClose.focus();
+});
+
+previewClose.addEventListener("click", () => {
+	previewDialog.close();
+});
+
+previewDialog.addEventListener("click", (event) => {
+	if (event.target === previewDialog) previewDialog.close();
+});
 
 selectorButtons.forEach((button) => {
 	button.addEventListener("click", () => {
@@ -43,3 +62,6 @@ flyerImage.addEventListener("load", () => {
 flyerImage.addEventListener("error", () => {
 	flyerImage.classList.remove("is-changing");
 });
+
+
+

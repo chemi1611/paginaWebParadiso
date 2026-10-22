@@ -212,8 +212,68 @@ h1 em {
   transition: opacity 160ms ease;
 }
 
+.flyer-preview-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.flyer-preview-trigger:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
+}
+
 .flyer-image.is-changing {
   opacity: 0.35;
+}
+
+.preview-dialog {
+  position: relative;
+  max-width: 96vw;
+  max-height: 96vh;
+  padding: 48px 16px 16px;
+  overflow: auto;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 16px;
+  background: #17101c;
+  box-shadow: 0 24px 80px rgb(0 0 0 / 60%);
+}
+
+.preview-dialog::backdrop {
+  background: rgb(10 7 12 / 88%);
+  backdrop-filter: blur(5px);
+}
+
+.preview-image {
+  display: block;
+  max-width: min(90vw, 1100px);
+  max-height: 82vh;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.preview-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 50%;
+  background: #2b2030;
+  color: #fff;
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.preview-close:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
 }
 
 .image-caption {
@@ -302,6 +362,4 @@ h1 em {
     transition-duration: 0.01ms !important;
   }
 }
-
-
 
