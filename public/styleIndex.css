@@ -290,9 +290,15 @@ h1 em {
   font-size: 14px;
 }
 
-footer span a {
+footer span a, .enlace {
   color: var(--pink);
   text-decoration: none;
+}
+
+.imagenesContacto {
+  flex-basis: 48px;
+    width: 48px;
+    height: 48px;
 }
 
 @media (max-width: 760px) {
@@ -367,4 +373,5 @@ footer span a {
     transition-duration: 0.01ms !important;
   }
 }
+
 
