@@ -23,6 +23,14 @@ body {
     #17101c;
 }
 
+.pagina-tabla {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
 button,
 a {
   font: inherit;
@@ -297,8 +305,34 @@ footer span a, .enlace {
 
 .imagenesContacto {
   flex-basis: 48px;
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.contenedor-tabla {
+  flex: 1;
+  min-height: 0;
+}
+
+.contenedor-tabla table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  border-spacing: 15px;
+}
+
+.contenedor-tabla td {
+  border: 1px solid rgb(255 255 255 / 20%);
+  text-align: center;
+}
+
+.nombre-contacto {
+  max-width: 300px;
+  margin: 0;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  font-weight: 700;
 }
 
 @media (max-width: 760px) {
@@ -343,6 +377,10 @@ footer span a, .enlace {
 
   h1 {
     max-width: 460px;
+  }
+
+  h1,
+  .nombre-contacto {
     font-size: clamp(40px, 12vw, 58px);
   }
 
@@ -373,5 +411,3 @@ footer span a, .enlace {
     transition-duration: 0.01ms !important;
   }
 }
-
-

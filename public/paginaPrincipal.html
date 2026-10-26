@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="styleIndex.css">
     <script src="scriptIndex.js" defer></script>
 </head>
-<body>
+<body class="pagina-tabla">
     <header class="Cabezera_Principal">
         <a class="brand" href="index.html" aria-label="Paradiso, inicio">
             <span id="logo"><img src="Imagenes/Paradiso_Logo.png" alt="Logo de Paradiso Pub &amp; Club"></span>
             <span>PARADISO <small>Exposiciones</small></span>
         </a>
         <span>
-            <table style="border-spacing: 15px 15px;">
+            <table style="border-spacing: 15px; table-layout: fixed;">
                 <tr>
                     <td><a class="enlace" href="paginaPrincipal.html">Sobre Nosotros</a></td>
                     <td><a class="enlace" href="paginaPrincipal.html">Contacto</a></td>
@@ -24,44 +24,31 @@
             </table>
         </span>
     </header>
-    <span>
+    <div class="contenedor-tabla">
         <table>
-            <TR>
-                <td>
-                    Discoteca Paradiso
-                </td>
-                <td>
-                    <img  class="imagenesContacto" src="Imagenes/Paradiso_Logo.png">
-                </td>
-                <td>
-                    LORE IPSUM LOREN IMPUSL
-                </td>
-            </TR>
-            <TR>
-                <td>
-                    Sandra Sanchez
-                </td>
-                <td>
-                    <img  class="imagenesContacto" src="Imagenes/Paradiso_Logo.png">
-                </td>
-                <td>
-                    LORE IPSUM LOREN IMPUSL
-                </td>
-            </TR>
-            <TR>
-                <td>
-                    Discoteca Paradiso
-                </td>
-                <td>
-                    <img  class="imagenesContacto" src="Imagenes/Paradiso_Logo.png">
-                </td>
-                <td>
-                    LORE IPSUM LOREN IMPUSL
-                </td>
-            </TR>
+            <tbody>
+                <tr>
+                    <td class="nombre-contacto">Discoteca Paradiso</td>
+                    <td><img class="imagenesContacto" src="Imagenes/Paradiso_Logo.png" alt="Logo de Paradiso"></td>
+                    <td>LORE IPSUM LOREN IMPUSL</td>
+                </tr>
+                <tr>
+                    <td class="nombre-contacto">Sandra Sanchez</td>
+                    <td><img class="imagenesContacto" src="Imagenes/Paradiso_Logo.png" alt="Logo de Paradiso"></td>
+                    <td>LORE IPSUM LOREN IMPUSL</td>
+                </tr>
+                <tr>
+                    <td class="nombre-contacto">Luna Sanchez</td>
+                    <td><img class="imagenesContacto" src="Imagenes/Paradiso_Logo.png" alt="Logo de Paradiso"></td>
+                    <td>LORE IPSUM LOREN IMPUSL</td>
+                </tr>
+                <tr>
+                    <td class="nombre-contacto">Jose Miguel Lucas</td>
+                    <td><img class="imagenesContacto" src="Imagenes/Paradiso_Logo.png" alt="Logo de Paradiso"></td>
+                    <td>LORE IPSUM LOREN IMPUSL</td>
+                </tr>
+            </tbody>
         </table>
-
-
-    </span>
+    </div>
 </body>
 </html>
