@@ -6,60 +6,56 @@
     <meta name="theme-color" content="#17101c">
     <meta name="description" content="Folleto de la exposición colectiva Paradiso.">
     <title>Paradiso — Exposiciones</title>
-    <link rel="stylesheet" href="styleIndex.css">
-    <script src="scriptIndex.js" defer></script>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="exposiciones.js" defer></script>
 </head>
 <body>
-    <header class="Cabezera_Principal">
-        <a class="brand" href="#inicio" aria-label="Paradiso, inicio">
-            <span id="logo"><img src="Imagenes/Paradiso_Logo.png" alt="Logo de Paradiso Pub &amp; Club"></span>
+    <header class="encabezado">
+        <a class="marca" href="index.html" aria-label="Paradiso, inicio">
+            <span class="logo-marca"><img src="imagenes/logo-paradiso-club.png" alt="Logo de Paradiso Pub &amp; Club"></span>
             <span>PARADISO <small>Exposiciones</small></span>
         </a>
-        <span>
-            <table style="border-spacing: 15px 15px;">
-                <tr>
-                    <td><a class="enlace" href="paginaPrincipal.html">Sobre Nosotros</a></td>
-                    <td><a class="enlace" href="paginaPrincipal.html">Contacto</a></td>
-                </tr>
-            </table>
-        </span>
+        <nav class="navegacion-principal" aria-label="Navegación principal">
+            <a class="enlace-navegacion" href="index.html">Inicio</a>
+            <a class="enlace-navegacion" href="contacto.html#contactos">Contacto</a>
+        </nav>
     </header>
 
     <main id="inicio">
-        <section class="showcase" aria-labelledby="page-title">
-            <div class="showcase-copy">
-                <p class="eyebrow"><span></span> Próximo evento</p>
-                <h1 id="TextoCentral">El Jardín <br><em>Sábado, 14 de Noviembre</em></h1>
-                <p class="intro">Explora el folleto para más detalles y ver cómo participar.</p>
+        <section class="presentacion" aria-labelledby="titulo-evento">
+            <div class="presentacion-contenido">
+                <p class="etiqueta-evento"><span></span> Próximo evento</p>
+                <h1 id="titulo-evento">El Jardín <br><em>Sábado, 14 de Noviembre</em></h1>
+                <p class="introduccion">Explora el folleto para más detalles y ver cómo participar.</p>
 
-                <div class="selector" aria-label="Selecciona una sección del folleto" role="group">
-                    <button class="selector-button is-active" type="button" data-flyer="cover" aria-pressed="true">Cartel</button>
-                    <button class="selector-button" type="button" data-flyer="info" aria-pressed="false">Información</button>
-                    <button class="selector-button" type="button" data-flyer="contact" aria-pressed="false">Contacto</button>
+                <div class="selector-folleto" aria-label="Selecciona una sección del folleto" role="group">
+                    <button class="boton-seccion activo" type="button" data-seccion-folleto="cartel" aria-pressed="true">Cartel</button>
+                    <button class="boton-seccion" type="button" data-seccion-folleto="informacion" aria-pressed="false">Información</button>
+                    <button class="boton-seccion" type="button" data-seccion-folleto="contacto" aria-pressed="false">Contacto</button>
                 </div>
             </div>
 
-            <figure class="flyer-frame">
-                <button class="flyer-preview-trigger" type="button" aria-label="Ampliar imagen del folleto">
+            <figure class="marco-folleto">
+                <button class="boton-ampliar-folleto" type="button" aria-label="Ampliar imagen del folleto">
                     <img
-                        class="flyer-image"
-                        id="flyer-image"
-                        src="Imagenes/bf62e737-97cb-4d42-a641-f6b5519dcd39.jpeg"
+                        class="imagen-folleto"
+                        id="imagen-folleto"
+                        src="imagenes/cartel-el-jardin.jpeg"
                         alt="Folleto de la exposición colectiva Paradiso, sábado 14 de noviembre de 2026"
                         fetchpriority="high"
                     >
                 </button>
-                <figcaption class="image-caption" id="image-caption"></figcaption>
+                <figcaption class="pie-imagen" id="pie-imagen"></figcaption>
             </figure>
         </section>
     </main>
 
-    <dialog class="preview-dialog" aria-label="Previsualización del folleto">
-        <button class="preview-close" type="button" aria-label="Cerrar previsualización">&times;</button>
-        <img class="preview-image" alt="">
+    <dialog class="dialogo-vista-previa" aria-label="Previsualización del folleto">
+        <button class="boton-cerrar-vista-previa" type="button" aria-label="Cerrar previsualización">&times;</button>
+        <img class="imagen-vista-previa" alt="">
     </dialog>
 
-    <footer class="site-footer">
+    <footer class="pie-pagina">
         <span><a href="https://www.google.com/maps/place/PARADISO+PUB+%26+CLUB/@39.4728585,-6.3798989,21z/data=!4m6!3m5!1s0xd15df90ae6b709b:0xe2d5bc9bc7a6afa2!8m2!3d39.4728408!4d-6.3800265!16s%2Fg%2F11fjzb9g2q?entry=ttu&g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D">Dirección del Local</a></span>
         <span>
             <a href="https://www.instagram.com/magicalgoblin.photography/">@magicalgoblin.photography</a><br>
