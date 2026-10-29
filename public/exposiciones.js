@@ -1,18 +1,15 @@
 const seccionesFolleto = {
 	cartel: {
 		src: "imagenes/cartel-el-jardin.jpeg",
-		alt: "Cartel de la exposición colectiva Paradiso, sábado 14 de noviembre de 2026",
-		pie: "Cartel de la exposición",
+		alt: "Cartel de la exposición colectiva Paradiso, sábado 14 de noviembre de 2026"
 	},
 	informacion: {
 		src: "imagenes/informacion-exposicion.jpeg",
-		alt: "Información sobre la exposición colectiva y sus actividades",
-		pie: "Información sobre la exposición",
+		alt: "Información sobre la exposición colectiva y sus actividades"
 	},
 	contacto: {
 		src: "imagenes/contacto-exposicion.jpeg",
-		alt: "Contacto de la exposición: @Magicalgoblin.photography y @Sandrasanchezz_",
-		pie: "Contacto de la exposición",
+		alt: "Contacto de la exposición: @Magicalgoblin.photography y @Sandrasanchezz_"
 	},
 };
 
