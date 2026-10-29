@@ -394,6 +394,93 @@ h1 em {
   border-top: 1px solid rgb(255 255 255 / 12%);
 }
 
+.pagina-ponentes {
+  width: min(920px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.titulo-ponentes {
+  max-width: none;
+  margin: 0;
+  color: var(--rosa);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 3.6vw, 43px);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-align: center;
+  text-shadow: 0 0 10px #0c0c0c;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.ponente {
+  margin-top: 56px;
+}
+
+.datos-ponente {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.retrato-ponente {
+  display: block;
+  flex: 0 0 180px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid rgb(255 223 72 / 65%);
+}
+
+.datos-ponente h2 {
+  margin: 10px 0 0;
+  color: #fbf5fb;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.datos-ponente h2:hover {
+  animation: flotar 3s ease-in-out infinite;
+  
+}
+
+.obras-ponente {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-items: center;
+  align-items: start;
+  gap: 24px;
+}
+
+.obra {
+  width: min(100%, 160px);
+  background: #00e51b;
+}
+
+.obra-uno {
+  height: 220px;
+}
+
+.obra-dos {
+  width: min(100%, 145px);
+  height: 164px;
+}
+
+.obra-tres {
+  width: min(100%, 130px);
+  height: 230px;
+}
+
+.obra-cuatro {
+  width: min(100%, 155px);
+  height: 140px;
+}
+
 @media (max-width: 760px) {
   .encabezado,
   .pie-pagina,
@@ -478,6 +565,44 @@ h1 em {
     width: 78px;
     height: 78px;
   }
+
+  .pagina-ponentes {
+    width: min(100% - 32px, 520px);
+    padding-top: 28px;
+  }
+
+  .titulo-ponentes {
+    font-size: clamp(24px, 7.2vw, 35px);
+  }
+
+  .ponente {
+    margin-top: 40px;
+  }
+
+  .datos-ponente {
+    gap: 20px;
+  }
+
+  .retrato-ponente {
+    flex-basis: clamp(96px, 30vw, 150px);
+    width: clamp(96px, 30vw, 150px);
+    height: clamp(96px, 30vw, 150px);
+  }
+
+  .datos-ponente h2 {
+    margin-top: 6px;
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .obras-ponente {
+    margin-top: 32px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+  }
+
+  .obra {
+    width: min(100%, 160px);
+  }
 }
 
 @media (orientation: landscape) and (min-width: 761px) {
@@ -504,4 +629,16 @@ h1 em {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+@keyframes flotar {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px); /* Sube 10 píxeles a la mitad de la animación */
+            }
+            100% {
+                transform: translateY(0px);
+            }
 }
