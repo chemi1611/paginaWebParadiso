@@ -1,0 +1,58 @@
+{
+  "ponentes": [
+    {
+      "id": "luna",
+      "nombre": "Luna Sánchez",
+      "subtitulo": "@magicalgoblin.photography",
+      "retrato": "imagenes/retrato-luna.jpeg",
+      "obras": [
+        {
+          "titulo": "Venus",
+          "imagen": "imagenes/Catalogo/luna/obra1.jpeg",
+          "descripcion": "La mujer vista como símbolo de deseo y del amor, tendida mientras duerme."
+        },
+        {
+          "titulo": "Lilith",
+          "imagen": "imagenes/Catalogo/luna/obra2.jpeg",
+          "descripcion": "Una figura libre conectada con la naturaleza y el mundo."
+        },
+        {
+          "titulo": "Titania",
+          "imagen": "imagenes/Catalogo/luna/obra3.jpeg",
+          "descripcion": "Retrato de la opulencia, la libertad y la sensualidad."
+        },
+        {
+          "titulo": "Eva",
+          "imagen": "imagenes/Catalogo/luna/obra4.jpeg",
+          "descripcion": "Una mártir moderna mirando desde una perspectiva inferior, que es dónde la sociedad la coloca."
+        },
+        {
+          "titulo": "Edén",
+          "imagen": "imagenes/Catalogo/luna/obra5.jpeg",
+          "descripcion": "La realidad del afecto femenino, el paraíso sin Adán, aceptando el pecado como propio."
+        }
+      ]
+    },
+    {
+      "id": "ponente-ejemplo-1",
+      "nombre": "Ponente de ejemplo 1",
+      "subtitulo": "Subtítulo de ejemplo 1",
+      "retrato": "",
+      "obras": []
+    },
+    {
+      "id": "ponente-ejemplo-2",
+      "nombre": "Ponente de ejemplo 2",
+      "subtitulo": "Subtítulo de ejemplo 2",
+      "retrato": "",
+      "obras": []
+    },
+    {
+      "id": "ponente-ejemplo-3",
+      "nombre": "Ponente de ejemplo 3",
+      "subtitulo": "Subtítulo de ejemplo 3",
+      "retrato": "",
+      "obras": []
+    }
+  ]
+}

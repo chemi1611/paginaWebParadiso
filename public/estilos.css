@@ -434,6 +434,15 @@ h1 em {
   border: 2px solid rgb(255 223 72 / 65%);
 }
 
+.retrato-placeholder {
+  display: grid;
+  place-items: center;
+  border-style: dashed;
+  background: rgb(255 255 255 / 5%);
+  color: rgb(255 255 255 / 55%);
+  font-size: 64px;
+}
+
 .datos-ponente h2 {
   margin: 10px 0 0;
   color: #fbf5fb;
@@ -445,40 +454,138 @@ h1 em {
 
 .datos-ponente h2:hover {
   animation: flotar 3s ease-in-out infinite;
-  
+}
+
+.subtitulo-ponente {
+  margin: 10px 0 0;
+  color: rgb(255 255 255 / 72%);
+  font-size: clamp(14px, 2vw, 18px);
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.identidad-ponente {
+  min-width: 0;
+}
+
+.desplegable-obras {
+  margin-top: 20px;
+}
+
+.boton-ver-obras {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border: 1px solid rgb(255 223 72 / 65%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 5%);
+  color: #ffdf48;
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.boton-ver-obras::-webkit-details-marker {
+  display: none;
+}
+
+.boton-ver-obras::after {
+  content: "+";
+  font-size: 20px;
+  line-height: 1;
+}
+
+.desplegable-obras[open] .boton-ver-obras::after {
+  content: "\2212";
+}
+
+.boton-ver-obras:hover,
+.boton-ver-obras:focus-visible {
+  background: #ffdf48;
+  color: #17101c;
+}
+
+.boton-ver-obras:focus-visible,
+.boton-ampliar-obra:focus-visible {
+  outline: 3px solid var(--rosa);
+  outline-offset: 4px;
 }
 
 .obras-ponente {
-  margin-top: 42px;
+  margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  justify-items: center;
-  align-items: start;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 20px;
 }
 
-.obra {
-  width: min(100%, 160px);
-  background: #00e51b;
+.sin-obras {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: rgb(255 255 255 / 65%);
+  font-style: italic;
 }
 
-.obra-uno {
-  height: 220px;
+.tarjeta-obra {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 14px;
+  background: rgb(255 255 255 / 5%);
 }
 
-.obra-dos {
-  width: min(100%, 145px);
-  height: 164px;
+.boton-ampliar-obra {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #100d13;
+  cursor: zoom-in;
 }
 
-.obra-tres {
-  width: min(100%, 130px);
-  height: 230px;
+.imagen-obra {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 180ms ease;
 }
 
-.obra-cuatro {
-  width: min(100%, 155px);
-  height: 140px;
+.boton-ampliar-obra:hover .imagen-obra {
+  transform: scale(1.035);
+}
+
+.texto-obra {
+  padding: 14px 16px 16px;
+}
+
+.texto-obra h3,
+.texto-obra-ampliada h2 {
+  margin: 0;
+  color: #ffdf48;
+  font-size: 18px;
+}
+
+.texto-obra-ampliada p {
+  margin: 8px 0 0;
+  color: rgb(255 255 255 / 78%);
+  line-height: 1.55;
+}
+
+.dialogo-obra {
+  width: max-content;
+  max-width: 96vw;
+}
+
+.dialogo-obra .imagen-vista-previa {
+  max-height: 68vh;
+}
+
+.texto-obra-ampliada {
+  max-width: min(90vw, 900px);
+  margin: 16px auto 0;
 }
 
 @media (max-width: 760px) {
@@ -594,18 +701,27 @@ h1 em {
     font-size: clamp(40px, 12vw, 58px);
   }
 
-  .obras-ponente {
-    margin-top: 32px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 16px;
+  .identidad-ponente {
+    flex: 1;
   }
 
-  .obra {
-    width: min(100%, 160px);
+  .desplegable-obras {
+    margin-top: 16px;
+  }
+
+  .obras-ponente {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+    gap: 14px;
   }
 }
 
-@media (orientation: landscape) and (min-width: 761px) {
+@media (orientation: landscape) {
+  .obras-ponente {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-template-columns: none;
+  }
+
   .marco-folleto {
     width: fit-content;
     max-width: 100%;
