@@ -11,6 +11,10 @@ const seccionesFolleto = {
 		src: "imagenes/contacto-exposicion.jpeg",
 		alt: "Contacto de la exposición: @Magicalgoblin.photography y @Sandrasanchezz_"
 	},
+	itinerario: {
+		src: "imagenes/itinerario.jpg",
+		alt: "Itinerario de El Jardín: apertura a las 17:30, lecturas, actuación, micro abierto y cierre a las 21:00"
+	},
 };
 
 const imagenFolleto = document.querySelector("#imagen-folleto");
