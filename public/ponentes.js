@@ -4,6 +4,7 @@ const imagenAmpliada = dialogoObra.querySelector(".imagen-vista-previa");
 const tituloAmpliado = dialogoObra.querySelector("#titulo-obra-ampliada");
 const descripcionAmpliada = dialogoObra.querySelector("#descripcion-obra-ampliada");
 const botonCerrar = dialogoObra.querySelector(".boton-cerrar-vista-previa");
+let posicionDesplazamiento = 0;
 
 function crearTarjetaObra(obra) {
 	const tarjeta = document.createElement("article");
@@ -35,8 +36,10 @@ function crearTarjetaObra(obra) {
 		imagenAmpliada.alt = obra.titulo;
 		tituloAmpliado.textContent = obra.titulo;
 		descripcionAmpliada.textContent = obra.descripcion;
+		posicionDesplazamiento = window.scrollY;
 		dialogoObra.showModal();
-		botonCerrar.focus();
+		botonCerrar.focus({ preventScroll: true });
+		window.scrollTo(0, posicionDesplazamiento);
 	});
 
 	return tarjeta;
@@ -140,6 +143,10 @@ async function cargarPonentes() {
 }
 
 botonCerrar.addEventListener("click", () => dialogoObra.close());
+
+dialogoObra.addEventListener("close", () => {
+	window.scrollTo(0, posicionDesplazamiento);
+});
 
 dialogoObra.addEventListener("click", (evento) => {
 	if (evento.target === dialogoObra) dialogoObra.close();

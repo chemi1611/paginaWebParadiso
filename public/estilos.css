@@ -332,6 +332,12 @@ h1 em {
   gap: 20px;
 }
 
+.contenido-contactos {
+  width: min(1040px, calc(100% - 48px));
+  margin: 0 auto;
+  padding-top: 28px;
+}
+
 .pagina-itinerario {
   display: flex;
   flex-direction: column;
@@ -357,6 +363,7 @@ h1 em {
   font-style: italic;
   line-height: 1.3;
   text-align: center;
+  animation: flotar 3s ease-in-out infinite;
 }
 
 .tarjeta-contacto {
@@ -425,6 +432,69 @@ h1 em {
   width: min(920px, calc(100% - 48px));
   margin: 0 auto;
   padding: 28px 0 56px;
+}
+
+.pagina-catalogo {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.filtros-catalogo {
+  margin: 24px 0 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.6fr);
+  gap: 16px;
+}
+
+.campo-filtro-catalogo {
+  display: grid;
+  gap: 8px;
+  color: var(--texto-secundario);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.campo-filtro-catalogo input,
+.campo-filtro-catalogo select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 10px;
+  background: #211827;
+  color: #fbf5fb;
+  font: inherit;
+}
+
+.campo-filtro-catalogo input:focus-visible,
+.campo-filtro-catalogo select:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 2px;
+}
+
+.resultado-catalogo {
+  margin: 18px 0 14px;
+  color: var(--texto-secundario);
+  font-size: 13px;
+}
+
+.obras-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.artista-obra-catalogo {
+  margin: 7px 0 0;
+  color: var(--texto-secundario);
+  font-size: 13px;
+}
+
+.sin-resultados-catalogo {
+  grid-column: 1 / -1;
+  color: var(--texto-secundario);
 }
 
 .titulo-ponentes {
@@ -543,7 +613,7 @@ h1 em {
 .obras-ponente {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
   gap: 20px;
 }
 
@@ -588,6 +658,7 @@ h1 em {
   padding: 14px 16px 16px;
 }
 
+.texto-obra h2,
 .texto-obra h3,
 .texto-obra-ampliada h2 {
   margin: 0;
@@ -602,6 +673,9 @@ h1 em {
 }
 
 .dialogo-obra {
+  position: fixed;
+  inset: 0;
+  margin: auto;
   width: max-content;
   max-width: 96vw;
 }
@@ -624,10 +698,13 @@ h1 em {
 
   .encabezado {
     min-height: 66px;
+    padding: 8px 0 12px;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .marca {
-    min-height: 66px;
+    min-height: 50px;
     gap: 9px;
     font-size: 12px;
   }
@@ -655,7 +732,10 @@ h1 em {
   }
 
   .navegacion-principal {
-    gap: 14px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
   }
 
   .enlace-navegacion {
@@ -688,6 +768,11 @@ h1 em {
     gap: 14px;
   }
 
+  .contenido-contactos {
+    width: min(100% - 32px, 520px);
+    padding-top: 28px;
+  }
+
   .contenido-itinerario {
     width: min(100% - 32px, 520px);
     padding-top: 24px;
@@ -706,6 +791,11 @@ h1 em {
   }
 
   .pagina-ponentes {
+    width: min(100% - 32px, 520px);
+    padding-top: 28px;
+  }
+
+  .pagina-catalogo {
     width: min(100% - 32px, 520px);
     padding-top: 28px;
   }
@@ -742,18 +832,22 @@ h1 em {
   }
 
   .obras-ponente {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+    gap: 14px;
+  }
+
+  .filtros-catalogo {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .obras-catalogo {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
     gap: 14px;
   }
 }
 
 @media (orientation: landscape) {
-  .obras-ponente {
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-template-columns: none;
-  }
-
   .marco-folleto {
     width: fit-content;
     max-width: 100%;

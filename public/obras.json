@@ -32,6 +32,110 @@
           "descripcion": "La realidad del afecto femenino, el paraíso sin Adán, aceptando el pecado como propio."
         }
       ]
+    },
+    {
+      "id": "sandra",
+      "nombre": "Sandra Sánchez",
+      "subtitulo": "@sandrasanchezz__",
+      "retrato": "imagenes/retrato-sandra.png",
+      "obras": [
+        {
+          "titulo": "Choque",
+          "imagen": "imagenes/Catalogo/sandra/sandra1.jpg",
+          "descripcion": "Crítica a la terapia empleada contra el colectivo"
+        }
+      ]
+    },
+    {
+      "id": "alicia-rosado-cid",
+      "nombre": "Alicia Rosado Cid",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Obra de Alicia Rosado Cid",
+          "imagen": "imagenes/Catalogo/Alicia Rosado Cid/alicia1.jpg",
+          "descripcion": "???"
+        }
+      ]
+    },
+    {
+      "id": "amanda-belloto-nogales",
+      "nombre": "Amanda Belloto Nogales",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Obra de Amanda Belloto Nogales",
+          "imagen": "imagenes/Catalogo/Amanda Belloto Nogales/amanda1.jpg",
+          "descripcion": "???"
+        }
+      ]
+    },
+    {
+      "id": "isabel-hernandez-segura",
+      "nombre": "Isabel Hernández Segura",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Obra de Isabel Hernández Segura",
+          "imagen": "imagenes/Catalogo/Isabel Hernández Segura/isabel1.jpg",
+          "descripcion": "???"
+        }
+      ]
+    },
+    {
+      "id": "laura-mirat-rojo",
+      "nombre": "Laura Mirat Rojo",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Obra de Laura Mirat Rojo",
+          "imagen": "imagenes/Catalogo/Laura Mirat Rojo/laura1.jpg",
+          "descripcion": "???"
+        }
+      ]
+    },
+    {
+      "id": "lucia-lopez-fernandez",
+      "nombre": "Lucía López Fernández",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Obra de Lucía López Fernández",
+          "imagen": "imagenes/Catalogo/Lucía López Fernández/lucia1.jpg",
+          "descripcion": "???"
+        }
+      ]
+    },
+    {
+      "id": "pepa-perez-zubizarreta-tasso",
+      "nombre": "Pepa Pérez - Zubizarreta Tasso",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Obra de Pepa Pérez - Zubizarreta Tasso",
+          "imagen": "imagenes/Catalogo/Pepa Pérez - Zubizarreta Tasso/pepa1.jpg",
+          "descripcion": "???"
+        }
+      ]
+    },
+    {
+      "id": "alex-mayoral-garcia",
+      "nombre": "Álex Mayoral García",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Obra de Álex Mayoral García",
+          "imagen": "imagenes/Catalogo/Álex Mayoral García/alex1.jpg",
+          "descripcion": "???"
+        }
+      ]
     }
   ]
 }

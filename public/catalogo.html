@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17101c">
+    <meta name="description" content="Catálogo de obras de los ponentes de Paradiso — El Jardín.">
+    <title>Paradiso — Catálogo</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="catalogo.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <a class="marca" href="index.html" aria-label="Paradiso, inicio">
+            <span class="logo-marca"><img src="imagenes/logo-paradiso-club.png" alt="Logo de Paradiso Pub &amp; Club"></span>
+            <span>PARADISO <small>Exposiciones</small></span>
+        </a>
+        <nav class="navegacion-principal" aria-label="Navegación principal">
+            <a class="enlace-navegacion" href="index.html">Inicio</a>
+            <a class="enlace-navegacion" href="contacto.html">Contacto</a>
+            <a class="enlace-navegacion" href="ponentes.html">Ponentes</a>
+            <a class="enlace-navegacion" href="catalogo.html" aria-current="page">Catálogo</a>
+        </nav>
+    </header>
+
+    <main class="pagina-catalogo">
+        <h1 class="titulo-ponentes">Catálogo de obras</h1>
+        <div class="filtros-catalogo">
+            <label class="campo-filtro-catalogo">
+                <span>Buscar por nombre de obra</span>
+                <input id="busqueda-obra" type="search" placeholder="Escribe el título..." autocomplete="off">
+            </label>
+            <label class="campo-filtro-catalogo">
+                <span>Filtrar por ponente</span>
+                <select id="filtro-ponente">
+                    <option value="">Todos los ponentes</option>
+                </select>
+            </label>
+        </div>
+        <p class="resultado-catalogo" id="resultado-catalogo" aria-live="polite"></p>
+        <div class="obras-catalogo" id="obras-catalogo" aria-live="polite"></div>
+    </main>
+
+    <dialog class="dialogo-vista-previa dialogo-obra" aria-labelledby="titulo-obra-ampliada">
+        <button class="boton-cerrar-vista-previa" type="button" aria-label="Cerrar previsualización">&times;</button>
+        <img class="imagen-vista-previa" alt="">
+        <div class="texto-obra-ampliada">
+            <h2 id="titulo-obra-ampliada"></h2>
+            <p id="descripcion-obra-ampliada"></p>
+        </div>
+    </dialog>
+
+    <footer class="pie-pagina">
+        <span><a href="https://www.google.com/maps/place/PARADISO+PUB+%26+CLUB/@39.4728585,-6.3798989,21z/data=!4m6!3m5!1s0xd15df90ae6b709b:0xe2d5bc9bc7a6afa2!8m2!3d39.4728408!4d-6.3800265!16s%2Fg%2F11fjzb9g2q?entry=ttu&amp;g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D">Dirección del Local</a></span>
+        <span>
+            <a href="https://www.instagram.com/magicalgoblin.photography/">@magicalgoblin.photography</a><br>
+            <a href="https://www.instagram.com/sandrasanchezz__/">@sandrasanchezz</a>
+        </span>
+    </footer>
+</body>
+</html>
