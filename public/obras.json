@@ -53,7 +53,7 @@
       "retrato": "",
       "obras": [
         {
-          "titulo": "Obra de Alicia Rosado Cid",
+          "titulo": "Autenticidad",
           "imagen": "imagenes/Catalogo/Alicia Rosado Cid/alicia1.jpg",
           "descripcion": "???"
         }
@@ -79,7 +79,7 @@
       "retrato": "",
       "obras": [
         {
-          "titulo": "Obra de Isabel Hernández Segura",
+          "titulo": "El éxtasis de morir bajo las estrellas",
           "imagen": "imagenes/Catalogo/Isabel Hernández Segura/isabel1.jpg",
           "descripcion": "???"
         }
@@ -92,7 +92,7 @@
       "retrato": "",
       "obras": [
         {
-          "titulo": "Obra de Laura Mirat Rojo",
+          "titulo": "Colonia, gato y pintalabios",
           "imagen": "imagenes/Catalogo/Laura Mirat Rojo/laura1.jpg",
           "descripcion": "???"
         }
@@ -105,7 +105,7 @@
       "retrato": "",
       "obras": [
         {
-          "titulo": "Obra de Lucía López Fernández",
+          "titulo": "That's me",
           "imagen": "imagenes/Catalogo/Lucía López Fernández/lucia1.jpg",
           "descripcion": "???"
         }
@@ -118,7 +118,7 @@
       "retrato": "",
       "obras": [
         {
-          "titulo": "Obra de Pepa Pérez - Zubizarreta Tasso",
+          "titulo": "sin título",
           "imagen": "imagenes/Catalogo/Pepa Pérez - Zubizarreta Tasso/pepa1.jpg",
           "descripcion": "???"
         }
@@ -131,9 +131,37 @@
       "retrato": "",
       "obras": [
         {
-          "titulo": "Obra de Álex Mayoral García",
+          "titulo": "Los colores del amor",
           "imagen": "imagenes/Catalogo/Álex Mayoral García/alex1.jpg",
           "descripcion": "???"
+        }
+      ]
+    },{
+      "id": "nuria-arroyo-leo",
+      "nombre": "Nuria Arroyo Leo",
+      "subtitulo": "@nyrya.rame.noesartista",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Kids out of the System pt.1",
+          "imagen": "imagenes/Catalogo/Nuria Arroyo Leo/nuria1.jpg",
+          "descripcion": "Los niños que se divierten fuera del sistema, alejados de las convenciones de género, moda y cualquier tipo de juicio social. Kids out of the System es una serie experimental de fotografías que explora la identidad, la libertad de expresión y la construcción de una estética propia a través de la mirada de una generación que juega a ser, sin necesidad de definirse."
+        },{
+          "titulo": "Kids out of the System pt.2",
+          "imagen": "imagenes/Catalogo/Nuria Arroyo Leo/nuria2.jpg",
+          "descripcion": "Los niños que se divierten fuera del sistema, alejados de las convenciones de género, moda y cualquier tipo de juicio social. Kids out of the System es una serie experimental de fotografías que explora la identidad, la libertad de expresión y la construcción de una estética propia a través de la mirada de una generación que juega a ser, sin necesidad de definirse."
+        },{
+          "titulo": "Kids out of the System pt.3",
+          "imagen": "imagenes/Catalogo/Nuria Arroyo Leo/nuria3.jpg",
+          "descripcion": "Los niños que se divierten fuera del sistema, alejados de las convenciones de género, moda y cualquier tipo de juicio social. Kids out of the System es una serie experimental de fotografías que explora la identidad, la libertad de expresión y la construcción de una estética propia a través de la mirada de una generación que juega a ser, sin necesidad de definirse."
+        },{
+          "titulo": "Kids out of the System pt.4",
+          "imagen": "imagenes/Catalogo/Nuria Arroyo Leo/nuria4.jpg",
+          "descripcion": "Los niños que se divierten fuera del sistema, alejados de las convenciones de género, moda y cualquier tipo de juicio social. Kids out of the System es una serie experimental de fotografías que explora la identidad, la libertad de expresión y la construcción de una estética propia a través de la mirada de una generación que juega a ser, sin necesidad de definirse."
+        },{
+          "titulo": "Kids out of the System pt.5",
+          "imagen": "imagenes/Catalogo/Nuria Arroyo Leo/nuria5.jpg",
+          "descripcion": "Los niños que se divierten fuera del sistema, alejados de las convenciones de género, moda y cualquier tipo de juicio social. Kids out of the System es una serie experimental de fotografías que explora la identidad, la libertad de expresión y la construcción de una estética propia a través de la mirada de una generación que juega a ser, sin necesidad de definirse."
         }
       ]
     }
