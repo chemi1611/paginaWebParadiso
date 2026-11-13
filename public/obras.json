@@ -164,6 +164,42 @@
           "descripcion": "Los niños que se divierten fuera del sistema, alejados de las convenciones de género, moda y cualquier tipo de juicio social. Kids out of the System es una serie experimental de fotografías que explora la identidad, la libertad de expresión y la construcción de una estética propia a través de la mirada de una generación que juega a ser, sin necesidad de definirse."
         }
       ]
-    }
+    },{
+      "id": "mario-marquez-asuncion",
+      "nombre": "Mario Márquez Asunción",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Sentimientos captados en cámara",
+          "imagen": "imagenes/Catalogo/Mario Márquez Asunción/mario1.png",
+          "descripcion": "???"
+        }
+      ]
+    },{
+      "id": "daniel-rodriguez-sanchez",
+      "nombre": "Daniel Rodríguez Sánchez",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Delicia",
+          "imagen": "imagenes/Catalogo/Daniel Rodríguez Sánchez/dani1.png",
+          "descripcion": "???"
+        }
+      ]
+    },{
+      "id": "enrique-guillen-lopez",
+      "nombre": "Enrique Guillén López",
+      "subtitulo": "Artista participante en El Jardín",
+      "retrato": "",
+      "obras": [
+        {
+          "titulo": "Los colores del amor",
+          "imagen": "imagenes/Catalogo/Enrique Guillén López/enrique1.png",
+          "descripcion": "???"
+        }
+      ]
+    } 
   ]
 }
