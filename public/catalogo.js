@@ -14,14 +14,33 @@ function normalizarTexto(texto) {
 	return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-function crearTarjetaObra({ obra, nombrePonente }) {
+function actualizarEnlaceObra(ponenteId, obra) {
+	const url = new URL(window.location.href);
+	url.searchParams.set("ponente", ponenteId);
+	url.searchParams.set("obra", obra.titulo);
+	window.history.replaceState(null, "", url);
+}
+
+function mostrarObra({ ponente, obra }) {
+	imagenAmpliada.src = obra.imagen;
+	imagenAmpliada.alt = obra.titulo;
+	tituloAmpliado.textContent = obra.titulo;
+	descripcionAmpliada.textContent = `${ponente.nombre} — ${obra.descripcion}`;
+	posicionDesplazamiento = window.scrollY;
+	actualizarEnlaceObra(ponente.id, obra);
+	dialogoObra.showModal();
+	botonCerrar.focus({ preventScroll: true });
+	window.scrollTo(0, posicionDesplazamiento);
+}
+
+function crearTarjetaObra({ ponente, obra }) {
 	const tarjeta = document.createElement("article");
 	tarjeta.className = "tarjeta-obra";
 
 	const botonAmpliar = document.createElement("button");
 	botonAmpliar.className = "boton-ampliar-obra";
 	botonAmpliar.type = "button";
-	botonAmpliar.setAttribute("aria-label", `Ampliar ${obra.titulo}, obra de ${nombrePonente}`);
+	botonAmpliar.setAttribute("aria-label", `Ampliar ${obra.titulo}, obra de ${ponente.nombre}`);
 
 	const imagen = document.createElement("img");
 	imagen.className = "imagen-obra";
@@ -38,21 +57,12 @@ function crearTarjetaObra({ obra, nombrePonente }) {
 
 	const artista = document.createElement("p");
 	artista.className = "artista-obra-catalogo";
-	artista.textContent = nombrePonente;
+	artista.textContent = ponente.nombre;
 
 	texto.append(titulo, artista);
 	tarjeta.append(botonAmpliar, texto);
 
-	botonAmpliar.addEventListener("click", () => {
-		imagenAmpliada.src = obra.imagen;
-		imagenAmpliada.alt = obra.titulo;
-		tituloAmpliado.textContent = obra.titulo;
-		descripcionAmpliada.textContent = `${nombrePonente} — ${obra.descripcion}`;
-		posicionDesplazamiento = window.scrollY;
-		dialogoObra.showModal();
-		botonCerrar.focus({ preventScroll: true });
-		window.scrollTo(0, posicionDesplazamiento);
-	});
+	botonAmpliar.addEventListener("click", () => mostrarObra({ ponente, obra }));
 
 	return tarjeta;
 }
@@ -72,11 +82,23 @@ function filtrarObras() {
 		listaObras.replaceChildren(mensaje);
 	} else {
 		listaObras.replaceChildren(...obrasFiltradas.map(({ ponente, obra }) => (
-			crearTarjetaObra({ obra, nombrePonente: ponente.nombre })
+			crearTarjetaObra({ ponente, obra })
 		)));
 	}
 
 	resultadoCatalogo.textContent = `${obrasFiltradas.length} ${obrasFiltradas.length === 1 ? "obra" : "obras"}`;
+}
+
+function abrirObraEnlace() {
+	const parametros = new URLSearchParams(window.location.search);
+	const ponenteId = parametros.get("ponente");
+	const tituloObra = parametros.get("obra");
+	if (!ponenteId || !tituloObra) return;
+
+	const seleccion = todasLasObras.find(({ ponente, obra }) => (
+		ponente.id === ponenteId && obra.titulo === tituloObra
+	));
+	if (seleccion) mostrarObra(seleccion);
 }
 
 function datosValidos(ponentes) {
@@ -115,6 +137,7 @@ async function cargarCatalogo() {
 			ponente.obras.map((obra) => ({ ponente, obra }))
 		));
 		filtrarObras();
+		abrirObraEnlace();
 	} catch (error) {
 		const mensaje = document.createElement("p");
 		mensaje.setAttribute("role", "alert");
@@ -129,6 +152,10 @@ filtroPonente.addEventListener("change", filtrarObras);
 botonCerrar.addEventListener("click", () => dialogoObra.close());
 
 dialogoObra.addEventListener("close", () => {
+	const url = new URL(window.location.href);
+	url.searchParams.delete("ponente");
+	url.searchParams.delete("obra");
+	window.history.replaceState(null, "", url);
 	window.scrollTo(0, posicionDesplazamiento);
 });
 
